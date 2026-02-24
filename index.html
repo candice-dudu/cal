@@ -44,14 +44,6 @@
             -webkit-tap-highlight-color: transparent;
             overscroll-behavior-y: none;
         }
-        /* 針對 iOS 全螢幕模式的安全區域調整 */
-        header {
-            padding-top: env(safe-area-inset-top, 3rem);
-        }
-        nav {
-            padding-bottom: env(safe-area-inset-bottom, 1rem);
-            height: calc(5rem + env(safe-area-inset-bottom, 0px));
-        }
         /* 隱藏捲軸但保持可捲動 */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -549,3 +541,4 @@
 </body>
 
 </html>
+
