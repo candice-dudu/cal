@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>旅費輕鬆記 | 日系極簡分帳小工具</title>
+        <!-- iPhone 加入主畫面後的圖示設定 -->
+    <link rel="apple-touch-icon" href="./cal.png">
+    <!-- 讓網頁以全螢幕 App 模式開啟 (隱藏網址列) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 設定頂部狀態欄顏色 (透明或與背景色融合) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- App 在主畫面顯示的名稱 -->
+    <meta name="apple-mobile-web-app-title" content="旅費輕鬆記">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -35,6 +43,14 @@
             color: #4A4A4A;
             -webkit-tap-highlight-color: transparent;
             overscroll-behavior-y: none;
+        }
+        /* 針對 iOS 全螢幕模式的安全區域調整 */
+        header {
+            padding-top: env(safe-area-inset-top, 3rem);
+        }
+        nav {
+            padding-bottom: env(safe-area-inset-bottom, 1rem);
+            height: calc(5rem + env(safe-area-inset-bottom, 0px));
         }
         /* 隱藏捲軸但保持可捲動 */
         .no-scrollbar::-webkit-scrollbar {
@@ -531,4 +547,5 @@
         }).mount('#app');
     </script>
 </body>
+
 </html>
